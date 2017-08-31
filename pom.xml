@@ -7,6 +7,12 @@
   <version>1.0-SNAPSHOT</version>
   <name>nulltommy Maven Webapp</name>
   <url>http://maven.apache.org</url>
+
+  <properties>
+    <org.springframework.version>3.2.8.RELEASE</org.springframework.version>
+    <!-- <org.springframework.version>4.0.2.RELEASE</org.springframework.version> -->
+  </properties>
+
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
@@ -15,11 +21,53 @@
       <scope>test</scope>
     </dependency>
 
+
+    <!--引入log4j-->
     <dependency>
       <groupId>log4j</groupId>
       <artifactId>log4j</artifactId>
       <version>1.2.17</version>
     </dependency>
+
+    <!--引入 Spring -->
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-context</artifactId>
+      <version>${org.springframework.version}</version>
+      <!--<scope>runtime</scope>-->
+    </dependency>
+
+    <!--自动引入-->
+    <!--<dependency>-->
+      <!--<groupId>org.springframework</groupId>-->
+      <!--<artifactId>spring</artifactId>-->
+      <!--<version>2.5.6.SEC02</version>-->
+    <!--</dependency>-->
+    <!--<dependency>-->
+      <!--<groupId>org.springframework</groupId>-->
+      <!--<artifactId>spring-context</artifactId>-->
+      <!--<version>3.2.0.RELEASE</version>-->
+    <!--</dependency>-->
+
+    <!--引入Spring MVC-->
+    <!--<dependency>-->
+      <!--<groupId>javax.servlet</groupId>-->
+      <!--<artifactId>servlet-api</artifactId>-->
+      <!--<version>3.0-alpha-1</version>-->
+    <!--</dependency>-->
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-webmvc</artifactId>
+      <version>4.0.5.RELEASE</version>
+    </dependency>
+
+     <!--引入 Struts2的核心包 -->
+    <dependency>
+      <groupId>org.apache.struts</groupId>
+      <artifactId>struts2-core</artifactId>
+      <version>2.3.16</version>
+    </dependency>
+
   </dependencies>
   <build>
     <finalName>nulltommy</finalName>
