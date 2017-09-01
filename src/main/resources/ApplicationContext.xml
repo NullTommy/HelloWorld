@@ -30,6 +30,11 @@
 
     <bean name="d" class="Category">
         <property name="name" value="${spring.name}" />
+        <property name="baby" ref="b"/>
+    </bean>
+
+    <bean name="b" class="Baby">
+        <property name="name" value="Baby"/>
     </bean>
 
 
