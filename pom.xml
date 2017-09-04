@@ -67,6 +67,12 @@
       <artifactId>struts2-core</artifactId>
       <version>2.3.16</version>
     </dependency>
+    <!--引入servlet-->
+    <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>servlet-api</artifactId>
+      <version>2.5</version>
+    </dependency>
 
   </dependencies>
   <build>

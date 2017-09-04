@@ -6,6 +6,7 @@
 <struts>
     <package name="basicstruts" extends="struts-default">
 
+        <!--测试struts:访问路径： http://localhost:8080/index.action -->
         <action name="index">
             <result>mine.jsp</result>
         </action>

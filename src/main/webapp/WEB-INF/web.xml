@@ -6,35 +6,34 @@
   <display-name>Archetype Created Web Application</display-name>
 
 
+  <!--配置Struts-->
   <filter>
     <filter-name>struts2</filter-name>
     <filter-class>
       org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter
     </filter-class>
   </filter>
-
   <filter-mapping>
     <filter-name>struts2</filter-name>
-    <!--<dispatcher>FORWARD</dispatcher>-->
-    <!--<dispatcher>REQUEST</dispatcher>-->
-    <url-pattern>/*</url-pattern>
+    <!--http://localhost:8080/index.action-->
+    <url-pattern>*.action</url-pattern>
   </filter-mapping>
 
-  <!--<servlet>-->
-    <!--<servlet-name>springmvc</servlet-name>-->
-    <!--<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>-->
-    <!--<init-param>-->
-      <!--<param-name>contextConfigLocation</param-name>-->
-      <!--<param-value>classpath:springmvc-servlet.xml</param-value>-->
-    <!--</init-param>-->
-    <!--&lt;!&ndash; <load-on-startup>1</load-on-startup> &ndash;&gt;-->
-  <!--</servlet>-->
+  <!--配置Servlet-->
+  <servlet>
+    <!-- 可以随便填只需要注意不要和其他servlet的名字重复即可（建议使用简单类名） -->
+    <servlet-name>AServlet</servlet-name>
+    <!-- 配置servlet的完整类名 -->
+    <servlet-class>TestServlet.AServlet</servlet-class>
+  </servlet>
 
-  <!--<servlet-mapping>-->
-    <!--<servlet-name>springmvc</servlet-name>-->
-    <!--<url-pattern>/-->
-    <!--</url-pattern>-->
-  <!--</servlet-mapping>-->
+  <!-- 配置上面这个servlet使用那个路径能被访问 -->
+  <!-- http://localhost:8080/AServlet -->
+  <servlet-mapping>
+    <servlet-name>AServlet</servlet-name>
+    <!-- 配置访问这个servlet的路径 （相对路径） /==>http://localhost:8080/day10_servlet/ http://localhost:8080/day10_servlet/AServlet -->
+    <url-pattern>/AServlet</url-pattern>
+  </servlet-mapping>
 
 
 </web-app>

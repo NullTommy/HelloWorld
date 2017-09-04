@@ -13,12 +13,15 @@ public class TestSpring {
 
         System.out.println("名字："+c.getName());
         System.out.println("Baby："+c.getBaby().getName());
-
     }
 }
 
 
 class Category {
+    private int id;
+    private String name;
+    private Baby baby;
+
     public int getId() {
         return id;
     }
@@ -31,9 +34,6 @@ class Category {
     public void setName(String name) {
         this.name = name;
     }
-    private int id;
-    private String name;
-    private Baby baby;
 
     public Baby getBaby() {
         return baby;
@@ -45,6 +45,7 @@ class Category {
 }
 
 class Baby {
+    private String name;
 
     public String getName() {
         return name;
@@ -52,5 +53,5 @@ class Baby {
     public void setName(String name) {
         this.name = name;
     }
-    private String name;
+
 }
